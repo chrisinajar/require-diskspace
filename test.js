@@ -2,10 +2,14 @@ const test = require('tape');
 const assertDiskspace = require('./');
 
 test('code runs', function (t) {
-  t.plan(2);
+  t.plan(4);
 
   assertDiskspace('1', function (err, truth) {
     t.ok(truth > 0, 'returns bytes over expected value');
+    t.notOk(err);
+  });
+  assertDiskspace('/', '1', function (err, truth) {
+    t.ok(truth > 0, 'lets you specify which file');
     t.notOk(err);
   });
 });
