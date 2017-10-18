@@ -1,0 +1,24 @@
+{
+  "name": "require-diskspace",
+  "version": "0.0.0",
+  "scripts": {
+    "test": "semistandard && tape ./test.js | tap-spec",
+    "tape": "tape",
+    "tap-spec": "tap-spec",
+    "semistandard": "semistandard"
+  },
+  "description": "Assert your disk space requirements in order to function",
+  "main": "index.js",
+  "repository": "git@github.com:chrisinajar/require-diskspace.git",
+  "author": "Chris Vickery <chrisinajar@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "semistandard": "^11.0.0",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.8.0"
+  },
+  "dependencies": {
+    "@sindresorhus/df": "^2.1.0",
+    "bytes": "^3.0.0"
+  }
+}
